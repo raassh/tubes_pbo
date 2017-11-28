@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package view;
 
 /**
  *
  * @author SVE14132CW
  */
-public class JPenerbanganManager extends javax.swing.JFrame {
+public class JadwalPenerbanganManager extends javax.swing.JFrame {
 
     /**
-     * Creates new form JPenerbanganManager
+     * Creates new form ManagerJPenerbangan
      */
-    public JPenerbanganManager() {
+    public JadwalPenerbanganManager() {
         initComponents();
     }
 
@@ -26,6 +27,9 @@ public class JPenerbanganManager extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jbdelete = new javax.swing.JButton();
+        jblogout = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         tfSearch = new javax.swing.JTextField();
         KategoriBox = new javax.swing.JComboBox<>();
@@ -33,11 +37,14 @@ public class JPenerbanganManager extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jbedit = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
-        jbdelete = new javax.swing.JButton();
-        jblogout = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jbdelete.setText("Delete");
+
+        jblogout.setText("Logout");
+
+        jLabel2.setText("Nama Manager");
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
@@ -79,12 +86,6 @@ public class JPenerbanganManager extends javax.swing.JFrame {
             }
         });
 
-        jbdelete.setText("Delete");
-
-        jblogout.setText("Logout");
-
-        jLabel2.setText("Nama Manager");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -103,7 +104,7 @@ public class JPenerbanganManager extends javax.swing.JFrame {
                             .addComponent(KategoriBox, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jbcari))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,7 +138,7 @@ public class JPenerbanganManager extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jbdelete))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jblogout, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
         );
@@ -174,20 +175,21 @@ public class JPenerbanganManager extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JadwalPenerbanganManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JPenerbanganManager().setVisible(true);
+                new JadwalPenerbanganManager().setVisible(true);
             }
         });
     }
