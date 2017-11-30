@@ -1,4 +1,8 @@
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /*
@@ -16,7 +20,15 @@ public class karyawan extends person{
     private double gaji;
     private ArrayList<transaksi> daftarTransaksi=new ArrayList<>();
     private int jumTransaksi;
-
+    private Database trans;
+    private Statement stmt = null;
+    private Connection c = null;
+    private ResultSet rs= null;
+    private Statement stmtup = null;
+    private Connection cup = null;
+    private ResultSet rsup= null;
+    
+    
     public karyawan(String idKaryawan, String nama, String JK, int umur) {
         super(nama, JK, umur);
         this.idKaryawan = idKaryawan;
@@ -46,5 +58,30 @@ public class karyawan extends person{
         return jumTransaksi;
     }
     
+    public void insertKaryawan () throws SQLException{
+        try{
+            trans.buatKoneksi();
+            String query ="INSERT INTO karyawan (idKaryawan, jabatan, gaji, idmanager) "+
+                    "VALUES ('"+idKaryawan+"','"+jabatan+"','"+gaji+"','"+idmanager+"')";
+            stmt.execute(query, Statement.RETURN_GENERATED_KEYS);
+            rs = stmt.getGeneratedKeys();
+            c.close();
+        } catch (SQLException ex){
+            ex.printStackTrace();
+        }
+    }
+    
+    public void updateKaryawan(){
+        try {
+            trans.buatKoneksi();
+            String query = "UPDATE karyawan set pass ='"+pass+"' where username='"+username+"'";
+            stmt.execute(query, Statement.RETURN_GENERATED_KEYS);
+            rs = stmt.getGeneratedKeys();
+            c.close();
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
     
 }
